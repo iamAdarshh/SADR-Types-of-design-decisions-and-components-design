@@ -1,0 +1,4 @@
+.venv
+.idea
+docs/Issues
+__pycache__
