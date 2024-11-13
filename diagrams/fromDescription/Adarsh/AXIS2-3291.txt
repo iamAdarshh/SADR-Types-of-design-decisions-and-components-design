@@ -1,0 +1,6 @@
+graph TD
+    A[WSDL2Java Tool] -->|Generate SOAP Request| B[SOAP Header]
+    B -->|Include Elements and Attributes| C[SOAP Request]
+    C -->|Marshalling and Unmarshalling| D[Databinding Framework]
+    D -->|Handle XSD Schema| E[XSD Schema]
+    E -->|Define Elements and Attributes| B

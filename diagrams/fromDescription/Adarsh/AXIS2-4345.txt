@@ -1,0 +1,5 @@
+graph TD
+    A[JAX-WS Handlers] -->|Retrieve and Manipulate SOAP Headers| B[MessageContext]
+    B -->|Provide SOAP Headers| C[SOAP Headers]
+    D[Axiom] -->|Internal Representation| B
+    E[SAAJ] -->|Transformation Avoided| B

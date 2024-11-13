@@ -1,0 +1,15 @@
+graph TD
+    A[JAX-WS Framework] -->|Pooling Optimization| B[JAXBContext]
+    A -->|Pooling Optimization| C[Unmarshaller]
+    A -->|Pooling Optimization| D[Marshaller]
+    A -->|Pooling Optimization| E[XMLInputFactory]
+    A -->|Pooling Optimization| F[XMLOutputFactory]
+    A -->|Optimized MTOM Traversal| G[OMNavigator]
+    A -->|Enhanced Error Handling| H["Message Consumption Errors"]
+    H -->|Debugging Info for 'Message Already Consumed'| I[Improved Serviceability]
+    I -->|Faster Debug Resolution| J[Improved Maintainability]
+    B -->|Use Pool to Reduce Instantiation Cost| K[Reduced Memory Footprint]
+    E -->|Pool for Efficient XML Parsing| L[Efficient Resource Usage]
+    G -->|Optimize MTOM Processing| M[Improved Performance]
+    K -->|Increase Performance| M
+    L -->|Increase Performance| M

@@ -22,6 +22,7 @@ for commit in Repository(repo_url).traverse_commits():
             commit_details = {
                 'Key': issue_key,
                 'Hash': commit.hash,
+                'Parents': commit.parents,
                 'Author': commit.author.name,
                 'Email': commit.author.email,
                 'Date': commit.author_date.__str__(),

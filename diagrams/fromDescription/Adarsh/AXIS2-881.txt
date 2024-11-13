@@ -1,0 +1,6 @@
+graph TD
+    A[Initialization/Cleanup Mechanism] -->|Manage Resources| B[Database Pool]
+    A -->|Integrate with| C[ConfigurationContext]
+    A -->|Optional Integration with| D[ServiceGroupContext]
+    B -->|Limit Connections| E[System Scalability]
+    A -->|Improve Performance by Reducing Setup Time| F[Improved Performance]

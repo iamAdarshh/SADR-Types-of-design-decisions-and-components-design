@@ -1,0 +1,7 @@
+graph TD
+    A[XMLUtils Component] -->|Generate OMElement| B[XMLStreamReader]
+    A -->|Ensure Reader is Closed| C[Memory Management]
+    A -->|Add Flexibility with buildAll Parameter| D[Overloaded Methods]
+    D -->|Control Full Build or Partial Build| E["XML Input (Element, InputStream, Reader)"]
+    B -->|Close Reader After Processing| C
+    C -->|Prevent Memory Leaks and Resource Exhaustion| F[System Performance]

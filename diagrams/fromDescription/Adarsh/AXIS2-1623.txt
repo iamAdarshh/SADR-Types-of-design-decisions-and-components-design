@@ -1,0 +1,5 @@
+graph TD
+    A[JAX-WS Client] -->|Enable MTOM via setMTOMEnabled| B[SOAPBinding]
+    A -->|Enable MTOM via SOAPBinding Property| B
+    B -->|Enable Attachment Optimization| C[MTOM]
+    D[Service] -->|Add Port with MTOM Binding| B

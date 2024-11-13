@@ -1,0 +1,5 @@
+graph TD
+    A[MessageContext] -->|Serialize Message| B[MessageExternalizeUtils]
+    B -->|Use Transport Layer| C[Message Formatter]
+    B -->|Serialize in Chunks| D[Transport Layer]
+    A -->|Handle Attachments| E[MessageExternalizeUtils]

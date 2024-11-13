@@ -1,0 +1,7 @@
+graph TD
+    A[Message Builder] -->|Store JSON Input Stream| B[Message Context]
+    B -->|Pass JSON to| C[Message Receiver]
+    C -->|Process JSON with Gson| D[Google Gson]
+    C -->|Optional: Parse JSON Stream| E[XML Stream Reader/Writer]
+    E -->|Convert JSON to XML| F[Axiom]
+    C -->|Simplified SOAP Envelope| G[SOAP Envelop]

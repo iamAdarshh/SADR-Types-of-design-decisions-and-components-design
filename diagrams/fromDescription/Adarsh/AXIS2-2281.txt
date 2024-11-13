@@ -1,0 +1,9 @@
+graph TD
+    A[MEX Module] -->|Enable/Disable MEX| B[MexMessageReceiver]
+    B -->|Process GetMetadata Request| C[MexUtil]
+    C -->|Fetch Configuration from| D[axis2.xml]
+    C -->|Fetch Configuration from| E[services.xml]
+    B -->|Check MEX Disabled| F[MexDisabledException]
+    B -->|Return Metadata Sections| G[Metadata Sections]
+    G -->|Inline, Location, Reference| H[Output Forms]
+    C -->|Determine Output Form| H

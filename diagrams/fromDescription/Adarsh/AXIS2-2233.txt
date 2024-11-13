@@ -1,0 +1,7 @@
+graph TD
+    A[PingModule] -->|Add Ping Operation| B[Service]
+    B -->|Implement Pingable Interface| C[Pingable Interface]
+    D[PingMessageReceiver] -->|Handle Ping Requests| B
+    D -->|Invoke Pingable Methods| E[Message Receiver]
+    B -->|Invoke Pingable Methods| E
+    E -->|Return Ping Status| F[Status Information]

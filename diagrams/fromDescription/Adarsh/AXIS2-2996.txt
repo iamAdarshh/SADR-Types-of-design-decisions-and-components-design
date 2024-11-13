@@ -1,0 +1,7 @@
+graph TD
+    A[CORBA Module] -->|Bridge Communication| B[CORBA Server]
+    A -->|Bridge Communication| C[Web Service Client]
+    D[Axis2] -->|Integrate Module| A
+    E[Apache Yoko] -->|CORBA Implementation| A
+    F[Antlr] -->|Generate IDL Parser Classes| A
+    D -->|Pluggable Deployer Architecture| A

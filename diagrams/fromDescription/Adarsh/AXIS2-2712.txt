@@ -1,0 +1,6 @@
+graph TD
+    A[MTOM Sample] -->|Run Once| B[generate.client]
+    B -->|Compile Client| C[Client Compilation]
+    A -->|Run Multiple Times| D[run.client]
+    D -->|Execute Client| E[Client Execution]
+    D -->|Focus on MTOM Performance| F[MTOM Testing]

@@ -1,0 +1,7 @@
+graph TD
+    A[JAX-WS Engine] -->|Process Message Payload| B[SOAP Handlers]
+    B -->|Manipulate Message| C[Message Payload]
+    D[Message Transformation Logic] -->|Transform Message Based on Fidelity| C
+    D -->|Optimize for Performance or Fidelity| E[jaxws.payload.highFidelity Property]
+    E -->|Set to TRUE for Lossless| D
+    E -->|Set to FALSE for Performance| D
