@@ -1,0 +1,35 @@
+%% Begin diagram definition
+graph TD
+
+    %% Color-coded classes and files
+    MessageContext:::modified
+    MessageExternalizeUtils:::added
+
+    %% Methods in MessageContext
+    MessageContext --> writeExternal["writeExternal()"]:::modified
+    MessageContext --> readExternal["readExternal()"]:::modified
+    MessageContext --> getPersistOptimized["getPersistOptimized()"]:::added
+
+    %% Classes and Methods in MessageExternalizeUtils
+    MessageExternalizeUtils --> writeExternal_ME["writeExternal()"]:::added
+    MessageExternalizeUtils --> readExternal_ME["readExternal()"]:::added
+    MessageExternalizeUtils --> MessageOutputStream["MessageOutputStream"]:::added
+    MessageExternalizeUtils --> MessageInputStream["MessageInputStream"]:::added
+
+    %% Methods in MessageOutputStream
+    MessageOutputStream --> write["write()"]:::added
+    MessageOutputStream --> close["close()"]:::added
+
+    %% Methods in MessageInputStream
+    MessageInputStream --> read["read()"]:::added
+    MessageInputStream --> close_MI["close()"]:::added
+
+    %% Connections between classes
+    MessageContext --> MessageExternalizeUtils
+    MessageExternalizeUtils --> MessageOutputStream
+    MessageExternalizeUtils --> MessageInputStream
+
+    %% Define color styles
+    classDef added fill:#A0E7A0,stroke:#333,stroke-width:2px;
+    classDef modified fill:#FFF5A3,stroke:#333,stroke-width:2px;
+    classDef removed fill:#F8A5A5,stroke:#333,stroke-width:2px;
